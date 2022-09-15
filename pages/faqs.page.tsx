@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import type {NextPage} from 'next'
+import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
 import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
 
@@ -46,7 +46,7 @@ const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
 }
 
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch(
     "http://localhost:3000/api/faqs"
     );

@@ -26,15 +26,17 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
         setPage(value);
     };
 
-    // const getComicsPage = async () => {
-    //     const response = await fetch(`http://localhost:3000/api/comics?offset=${limit*(page-1)}`)
-    //     const results = await response.json()
-    //     setComicsPage(results.data.results)
-    // }
+    const getComicsPage = async () => {
+        const offset = limit*(page-1);
+        const response = await fetch(`http://localhost:3000/api/comics?offset=${offset}`)
+        const results = await response.json()
+        console.log(results)
+        setComicsPage(results)
+    }
 
-    // useEffect(() => {
-    //     getComicsPage()
-    // },[page])
+    useEffect(() => {
+        getComicsPage()
+    },[page])
 
     return (
         <>
