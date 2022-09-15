@@ -4,15 +4,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
 import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
-
-interface Data {
-  id: number,
-  question: string,
-  answer: string,
-}
+import {faqs, faq} from 'dh-marvel/features/faqs';
 
 type faqsProps = {
-  faqs: Data[],
+  faqs: faq[],
 }
 
 const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
@@ -24,7 +19,7 @@ const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <BodySingle title={"Preguntas Frecuentes"}>
-              {faqs.map((faq: Data) => 
+              {faqs.map((faq: faq) => 
                 <Accordion key={faq.id}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -47,10 +42,6 @@ const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
 
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(
-    "http://localhost:3000/api/faqs"
-    );
-    const faqs: Data[] = await response.json();
     return {
       props:  { faqs } ,
     };
