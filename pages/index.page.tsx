@@ -28,7 +28,7 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
 
     const getComicsPage = async () => {
         const offset = limit*(page-1);
-        const response = await fetch(`http://localhost:3000/api/comics?offset=${offset}`)
+        const response = await fetch(`/api/comics?offset=${offset}`)
         const results = await response.json()
         console.log(results)
         setComicsPage(results)
