@@ -5,15 +5,24 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useRouter } from 'next/router';
 
 type comicCardProps = {
+    id: number,
     title: string,
     img: string,
 }
 
-const ComicCard: FC<comicCardProps> = ({title, img}: comicCardProps) => {
+const ComicCard: FC<comicCardProps> = ({id, title, img}: comicCardProps) => {
+
+  const router = useRouter()
+
+  const goToDetail = () => {
+    router.push(`/comic/${id}`)
+  }
+
   return (
-    <Card sx={{ maxWidth: 345}}>
+    <Card>
       <CardMedia
         component="img"
         height="300"
@@ -27,7 +36,7 @@ const ComicCard: FC<comicCardProps> = ({title, img}: comicCardProps) => {
       </CardContent>
       <CardActions>
         <Button size="small">Comprar</Button>
-        <Button size="small">Ver Detalle</Button>
+        <Button size="small" onClick={goToDetail}>Ver Detalle</Button>
       </CardActions>
     </Card>
   );

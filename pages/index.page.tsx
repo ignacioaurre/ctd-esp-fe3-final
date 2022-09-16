@@ -9,6 +9,7 @@ import { getComics } from 'dh-marvel/services/marvel/marvel.service';
 import { Comic } from 'dh-marvel/features/comic.types';
 import Pagination from '@mui/material/Pagination';
 import { Stack } from '@mui/material';
+import CircularIndeterminate from 'dh-marvel/components/loading/loading';
 
 type homeProps = {
     comics: Comic[],
@@ -20,9 +21,11 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
 
     const [comicsPage, setComicsPage] = useState<Comic[]>(comics)
     const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false)
     const limit = 12;
 
     const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
+        setLoading(true)
         setPage(value);
     };
 
@@ -30,8 +33,8 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
         const offset = limit*(page-1);
         const response = await fetch(`/api/comics?offset=${offset}`)
         const results = await response.json()
-        console.log(results)
         setComicsPage(results)
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -49,7 +52,10 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
                 <Stack alignItems='center' margin='20px'>
                     <Pagination count={Math.round(total/12)} page={page} onChange={handleChange} hidePrevButton={page == 1 ? true : false} />
                 </Stack>
-                <Grid comics={comicsPage} ></Grid>
+                {loading ? 
+                <CircularIndeterminate /> :
+                    <Grid comics={comicsPage} ></Grid>
+                }
                 <Stack alignItems='center' margin='20px'>
                     <Pagination count={Math.round(total/12)} page={page} onChange={handleChange} hidePrevButton={page == 1 ? true : false}/>
                 </Stack>
@@ -63,6 +69,6 @@ export async function getStaticProps() {
       return {
         props:  { comics: response.data.results, count: response.data.count, total: response.data.total } ,
       };
-  }
+}
 
 export default Index
