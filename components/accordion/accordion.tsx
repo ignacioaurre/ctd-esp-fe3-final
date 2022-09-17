@@ -11,7 +11,7 @@ type Items = {
 }
 
 type Characters = {
-  available: 17,
+  available: number,
   collectionURI: string,
   items: Items[] ,
   returned: number,
@@ -24,7 +24,11 @@ type AccordionProps = {
     characters?: Characters,
 }
 
-const AccordionComponent: FC<AccordionProps> = ({id, title, description = "No hay descripción", characters}: AccordionProps) => {
+const AccordionComponent: FC<AccordionProps> = ({id, title, description , characters}: AccordionProps) => {
+  
+  const descriptionMsg = description === '' || null ? "No hay descripción" : description;
+  const charactersMsg = "No hay personajes para este comic";
+  
   return (
     <Accordion key={id}>
         <AccordionSummary
@@ -35,10 +39,10 @@ const AccordionComponent: FC<AccordionProps> = ({id, title, description = "No ha
         <Typography>{title}</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{backgroundColor: "whitesmoke"}}>
-        {description && <Typography>{description}</Typography>}
-        {characters &&  (
+        {!characters ?  <Typography>{descriptionMsg}</Typography>
+        : characters.available > 0 ? (
           characters.items.map(char => <Typography key={char.name}>{char.name}</Typography>)
-        )}
+        ): <Typography>{charactersMsg}</Typography>}
         </AccordionDetails>
     </Accordion>
   )

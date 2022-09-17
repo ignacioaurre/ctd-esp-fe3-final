@@ -1,5 +1,5 @@
 import React from 'react'
-import { NextPage } from 'next'
+import { GetStaticPaths, GetStaticPathsContext, GetStaticProps, GetStaticPropsContext, GetStaticPropsResult, NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -7,7 +7,7 @@ import AccordionComponent from 'dh-marvel/components/accordion/accordion'
 import BodySingle from 'dh-marvel/components/layouts/body/single/body-single'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import Image from 'next/image'
-import { getComic } from 'dh-marvel/services/marvel/marvel.service'
+import { getComic, getComics } from 'dh-marvel/services/marvel/marvel.service'
 import { Comic } from 'dh-marvel/features/comic.types'
 
 type Items = {
@@ -16,7 +16,7 @@ type Items = {
 }
 
 type Characters = {
-available: 17,
+available: number,
 collectionURI: string,
 items: Items[] ,
 returned: number,
@@ -24,15 +24,19 @@ returned: number,
 
 type ComicDetailProps = {
     id: number,
+    thumbnail: {
+        path: string,
+        extension: string,
+    }
     pageCount: number,
     title: string,
     description: string,
     characters: Characters,
 }
 
-const ComicDetail: NextPage<ComicDetailProps> = ({id, pageCount, title, description, characters}: ComicDetailProps) => {
-//     const router = useRouter()
-//   const { id } = router.query
+const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, title, description, characters}: ComicDetailProps) => {
+
+    const urlImage = thumbnail.path + '.' + thumbnail.extension;
 
   return (
         <>
@@ -44,7 +48,7 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, pageCount, title, descript
             <BodySingle title={"Detalle del Comic"} >
                 <Grid2 container spacing={2} direction='row' alignItems='center' justifyContent='center' marginTop='10px'>
                     <Grid2 xs={3}>
-                            <Image src='http://i.annihil.us/u/prod/marvel/i/mg/c/80/5e3d7536c8ada.jpg' alt='Portada del comic' height={300} width={200}/>
+                            <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
                     </Grid2>
                     <Grid2 xs={3}>
                         <div>ComicDetail: {title}</div>
@@ -61,11 +65,24 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, pageCount, title, descript
   )
 }
 
-export async function getStaticProps() {
-    const response: Comic = await getComic(1158)
+
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const response = await getComics(0,24);
+    const comics: Comic[] = await response.data.results;
+    const paths = comics.map(comic => ({
+        params: {id: `${comic.id}`}
+    }))
+    return {paths, fallback: false}
+}
+
+export const getStaticProps: GetStaticProps<ComicDetailProps> = async ({params}: GetStaticPropsContext<any>) => {
+    const { id } = params;
+    const response: Comic = await getComic(id);
       return {
-        props:  { id: response.id, pageCount: response.pageCount, title: response.title, description: response.description, characters: response.characters } ,
+        props:  { id: response.id, thumbnail: response.thumbnail, pageCount: response.pageCount, title: response.title, description: response.description, characters: response.characters } ,
       };
 }
+
 
 export default ComicDetail
