@@ -6,7 +6,8 @@ import AccordionComponent from 'dh-marvel/components/accordion/accordion'
 import BodySingle from 'dh-marvel/components/layouts/body/single/body-single'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import Image from 'next/image'
-import { getComic, getComics } from 'dh-marvel/services/marvel/marvel.service'
+import { getCharacter, getCharacters } from 'dh-marvel/services/marvel/marvel.service'
+import { Character } from 'dh-marvel/features/Types/character.types'
 import { Comic } from 'dh-marvel/features/Types/comic.types'
 
 type Items = {
@@ -14,49 +15,45 @@ type Items = {
     name: string,
 }
 
-type Characters = {
-available: number,
-collectionURI: string,
-items: Items[] ,
-returned: number,
-}
+type Comics = {
+    available: number,
+    collectionURI: string,
+    items: Items[] ,
+    returned: number,
+  }
 
-type ComicDetailProps = {
+type CharacterDetailProps = {
     id: number,
+    name: string,
     thumbnail: {
         path: string,
         extension: string,
     }
-    pageCount: number,
-    title: string,
     description: string,
-    characters: Characters,
+    comics: Comics,
 }
 
-const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, title, description, characters}: ComicDetailProps) => {
+const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, description, comics}: CharacterDetailProps) => {
 
     const urlImage = thumbnail.path + '.' + thumbnail.extension;
 
   return (
         <>
             <Head>
-                <title>Home Page</title>
-                <meta name="Home" content="Home Page"/>
+                <title>Detalle del Personaje</title>
+                <meta name="Home" content="Detalle del Personaje"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <BodySingle title={"Detalle del Comic"} >
+            <BodySingle title={"Detalle del Personaje"} >
                 <Grid2 container spacing={2} direction='row' alignItems='center' justifyContent='center' marginTop='10px'>
                     <Grid2 xs={3}>
                             <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
                     </Grid2>
                     <Grid2 xs={3}>
-                        <div>ComicDetail: {title}</div>
+                        <div>CharacterDetail: {}</div>
                     </Grid2>
                     <Grid2 xs={7}>
-                        <AccordionComponent id={id} title="Descripcion" description={description}/> 
-                    </Grid2>
-                    <Grid2 xs={7}>
-                        <AccordionComponent id={pageCount} title="Personajes" characters={characters}/> 
+                        <AccordionComponent id={2} title="Comics"  characters={comics}/> 
                     </Grid2>
                 </Grid2>
             </BodySingle>
@@ -67,21 +64,22 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const response = await getComics(0,24);
-    const comics: Comic[] = await response.data.results;
-    const paths = comics.map(comic => ({
-        params: {id: `${comic.id}`}
+    const response = await getCharacters(0, 12);
+    const characters: Character[] = await response.data.results;
+    const paths = characters.map(char => ({
+        params: {id: `${char.id}`}
     }))
     return {paths, fallback: false}
 }
 
-export const getStaticProps: GetStaticProps<ComicDetailProps> = async ({params}: GetStaticPropsContext<any>) => {
+export const getStaticProps: GetStaticProps<CharacterDetailProps> = async ({params}: GetStaticPropsContext<any>) => {
     const { id } = params;
-    const response: Comic = await getComic(id);
+    const response = await getCharacter(id);
+    const character: Character = await response
       return {
-        props:  { id: response.id, thumbnail: response.thumbnail, pageCount: response.pageCount, title: response.title, description: response.description, characters: response.characters } ,
+        props:  { id: character.id, name: character.name, thumbnail: character.thumbnail, description: character.description, comics: character.comics} ,
       };
 }
 
 
-export default ComicDetail
+export default CharacterDetail

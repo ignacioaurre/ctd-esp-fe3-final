@@ -6,7 +6,7 @@ import BodySingle from "dh-marvel/components/layouts/body/single/body-single";
 import Grid from 'dh-marvel/components/grid/grid';
 import { getComics } from 'dh-marvel/services/marvel/marvel.service';
 
-import { Comic } from 'dh-marvel/features/comic.types';
+import { Comic } from 'dh-marvel/features/Types/comic.types';
 import Pagination from '@mui/material/Pagination';
 import { Stack } from '@mui/material';
 import CircularIndeterminate from 'dh-marvel/components/loading/loading';

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { Comic } from 'dh-marvel/features/comic.types';
+import { Comic } from 'dh-marvel/features/Types/comic.types';
 import ComicCard from '../comicCard/comicCard';
 
 interface Props {

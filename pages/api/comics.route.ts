@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { Comic } from 'dh-marvel/features/comic.types';
+import type { Comic } from 'dh-marvel/features/Types/comic.types';
 import { getComics } from 'dh-marvel/services/marvel/marvel.service';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Comic[]>){
