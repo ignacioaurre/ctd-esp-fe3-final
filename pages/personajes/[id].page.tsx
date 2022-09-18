@@ -41,10 +41,10 @@ const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, d
         <>
             <Head>
                 <title>Detalle del Personaje</title>
-                <meta name="Home" content="Detalle del Personaje"/>
+                <meta name="Detalle Personaje" content={name}/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <BodySingle title={"Detalle del Personaje"} >
+            <BodySingle title={name} >
                 <Grid2 container spacing={2} direction='row' alignItems='center' justifyContent='center' marginTop='10px'>
                     <Grid2 xs={3}>
                             <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
