@@ -1,4 +1,5 @@
 import React from 'react'
+import LayoutGeneral from 'dh-marvel/components/layouts/layout-general';
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
 import Head from 'next/head'
 
@@ -48,7 +49,7 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
     const buttonTxt = stock > 0 ? "Comprar" : "No hay stock disponible"
 
   return (
-        <>
+        <LayoutGeneral>
             <Head>
                 <title>Home Page</title>
                 <meta name="Home" content="Home Page"/>
@@ -76,7 +77,7 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button sx={{width: "100%"}} disabled={stock == 0} size="large">{buttonTxt}</Button>
+                            <Button sx={{width: "100%"}} disabled={stock == 0} size="large" variant="contained">{buttonTxt} </Button>
                         </CardActions>
                         </Card>
                     </Grid2>
@@ -88,7 +89,7 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
                     </Grid2>
                 </Grid2>
             </BodySingle>
-        </>
+        </LayoutGeneral>
   )
 }
 

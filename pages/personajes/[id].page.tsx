@@ -1,4 +1,5 @@
 import React from 'react'
+import LayoutGeneral from 'dh-marvel/components/layouts/layout-general';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from 'next'
 import Head from 'next/head'
 
@@ -38,7 +39,7 @@ const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, d
     const urlImage = thumbnail.path + '.' + thumbnail.extension;
 
   return (
-        <>
+        <LayoutGeneral>
             <Head>
                 <title>Detalle del Personaje</title>
                 <meta name="Detalle Personaje" content={name}/>
@@ -57,7 +58,7 @@ const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, d
                     </Grid2>
                 </Grid2>
             </BodySingle>
-        </>
+        </LayoutGeneral>
   )
 }
 

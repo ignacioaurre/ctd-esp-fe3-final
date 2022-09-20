@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LayoutGeneral from 'dh-marvel/components/layouts/layout-general';
 import type {NextPage} from 'next'
 import Head from 'next/head'
 
@@ -42,7 +43,7 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
     },[page])
 
     return (
-        <>
+        <LayoutGeneral>
             <Head>
                 <title>Home Page</title>
                 <meta name="Home" content="Home Page"/>
@@ -60,7 +61,7 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
                     <Pagination count={Math.round(total/12)} page={page} onChange={handleChange} hidePrevButton={page == 1 ? true : false}/>
                 </Stack>
             </BodySingle>
-        </>
+        </LayoutGeneral>
     )
 }
 

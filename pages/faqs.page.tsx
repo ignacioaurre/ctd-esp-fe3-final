@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import LayoutGeneral from 'dh-marvel/components/layouts/layout-general';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import type {GetStaticProps, NextPage} from 'next'
@@ -12,7 +13,7 @@ type faqsProps = {
 
 const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
   return (
-    <>
+    <LayoutGeneral>
             <Head>
                 <title>Preguntas Frecuentes</title>
                 <meta name="faqs" content="Preguntas Frecuentes"/>
@@ -36,7 +37,7 @@ const Faqs: NextPage<faqsProps> = ( { faqs }: faqsProps ) => {
                 </Accordion>
                 )}
             </BodySingle>
-        </>
+        </LayoutGeneral>
   )
 }
 
