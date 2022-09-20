@@ -4,9 +4,10 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from 'next/link'
 
 type Items = {
-  resourseURI: string,
+  resourceURI: string,
   name: string,
 }
 
@@ -28,6 +29,12 @@ const AccordionComponent: FC<AccordionProps> = ({id, title, description , charac
   
   const descriptionMsg = description === '' || null ? "No hay descripción" : description;
   const charactersMsg = "No hay personajes para este comic";
+
+  const urlNormalizer = (url: String) => {
+    const newUrl = url?.split("/").slice(-1)[0];
+    const baseUrl = url?.split("/").slice(-2)[0] == "characters" ? "personajes" : "comic"
+    return `/${baseUrl}/${newUrl}`
+  }
   
   return (
     <Accordion key={id}>
@@ -41,7 +48,7 @@ const AccordionComponent: FC<AccordionProps> = ({id, title, description , charac
         <AccordionDetails sx={{backgroundColor: "whitesmoke"}}>
         {!characters ?  <Typography>{descriptionMsg}</Typography>
         : characters.available > 0 ? (
-          characters.items.map(char => <Typography key={char.name}>{char.name}</Typography>)
+          characters.items.map(char => <Link href={urlNormalizer(char.resourceURI)} key={char.name} style={{display: "block"}}><p style={{cursor: 'pointer'}}>{char.name}</p></Link>)
         ): <Typography>{charactersMsg}</Typography>}
         </AccordionDetails>
     </Accordion>

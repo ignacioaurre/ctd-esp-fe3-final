@@ -67,7 +67,10 @@ const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
 export async function getStaticProps() {
     const response = await getComics(0, 12)
       return {
-        props:  { comics: response.data.results, count: response.data.count, total: response.data.total } ,
+        props:  { 
+            comics: response.data.results,
+            count: response.data.count,
+            total: response.data.total } ,
       };
 }
 

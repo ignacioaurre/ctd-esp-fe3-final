@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from 'next'
+import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
 import Head from 'next/head'
 
 import AccordionComponent from 'dh-marvel/components/accordion/accordion'
@@ -8,9 +8,14 @@ import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import Image from 'next/image'
 import { getComic, getComics } from 'dh-marvel/services/marvel/marvel.service'
 import { Comic } from 'dh-marvel/features/Types/comic.types'
+import CardContent from '@mui/material/CardContent'
+import Card from '@mui/material/Card'
+import Typography from '@mui/material/Typography'
+import CardActions from '@mui/material/CardActions'
+import Button from '@mui/material/Button'
 
 type Items = {
-    resourseURI: string,
+    resourceURI: string,
     name: string,
 }
 
@@ -31,11 +36,16 @@ type ComicDetailProps = {
     title: string,
     description: string,
     characters: Characters,
+    price: number,
+    oldPrice: number,
+    stock: number,
+    format: string,
 }
 
-const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, title, description, characters}: ComicDetailProps) => {
+const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, title, description, characters, price, oldPrice, stock, format}: ComicDetailProps) => {
 
     const urlImage = thumbnail.path + '.' + thumbnail.extension;
+    const buttonTxt = stock > 0 ? "Comprar" : "No hay stock disponible"
 
   return (
         <>
@@ -50,7 +60,25 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
                             <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
                     </Grid2>
                     <Grid2 xs={3}>
-                        <div>ComicDetail: {title}</div>
+                    <Card sx={{ minWidth: 300 }}>
+                        <CardContent>
+                            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                            {format}
+                            </Typography>
+                            <Typography variant="h6" component="div">
+                            {title}
+                            </Typography>
+                            <Typography sx={{ mb: 1.5, textDecorationLine: "line-through" }} color="text.secondary">
+                            { oldPrice != price ? `$${oldPrice}` : null}
+                            </Typography>
+                            <Typography variant="body1">
+                            ${price}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button sx={{width: "100%"}} disabled={stock == 0} size="large">{buttonTxt}</Button>
+                        </CardActions>
+                        </Card>
                     </Grid2>
                     <Grid2 xs={7}>
                         <AccordionComponent id={id} title="Descripcion" description={description}/> 
@@ -64,22 +92,11 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
   )
 }
 
-
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    const response = await getComics(0,24);
-    const comics: Comic[] = await response.data.results;
-    const paths = comics.map(comic => ({
-        params: {id: `${comic.id}`}
-    }))
-    return {paths, fallback: false}
-}
-
-export const getStaticProps: GetStaticProps<ComicDetailProps> = async ({params}: GetStaticPropsContext<any>) => {
+export const getServerSideProps: GetServerSideProps<ComicDetailProps> = async ({params}: GetServerSidePropsContext<any>) => {
     const { id } = params;
     const response: Comic = await getComic(id);
       return {
-        props:  { id: response.id, thumbnail: response.thumbnail, pageCount: response.pageCount, title: response.title, description: response.description, characters: response.characters } ,
+        props:  { id: response.id, thumbnail: response.thumbnail, pageCount: response.pageCount, title: response.title, description: response.description, characters: response.characters, price: response.price, oldPrice: response.oldPrice, stock: response.stock, format: response.format } ,
       };
 }
 

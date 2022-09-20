@@ -5,13 +5,13 @@ import Head from 'next/head'
 import AccordionComponent from 'dh-marvel/components/accordion/accordion'
 import BodySingle from 'dh-marvel/components/layouts/body/single/body-single'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
+import Box from '@mui/material/Box'
 import Image from 'next/image'
 import { getCharacter, getCharacters } from 'dh-marvel/services/marvel/marvel.service'
 import { Character } from 'dh-marvel/features/Types/character.types'
-import { Comic } from 'dh-marvel/features/Types/comic.types'
 
 type Items = {
-    resourseURI: string,
+    resourceURI: string,
     name: string,
 }
 
@@ -45,15 +45,15 @@ const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, d
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <BodySingle title={name} >
-                <Grid2 container spacing={2} direction='row' alignItems='center' justifyContent='center' marginTop='10px'>
-                    <Grid2 xs={3}>
-                            <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
+                <Grid2 container spacing={10} direction={{md: "row", xs:"column"}} alignItems='center' justifyContent='center' marginTop='10px'>
+                    <Grid2 xs={5} md={3} position="relative" height="300px">
+                            <Image src={urlImage} alt='Portada del comic' layout='fill'/>
                     </Grid2>
-                    <Grid2 xs={3}>
-                        <div>CharacterDetail: {}</div>
+                    <Grid2 xs={5} md={3} padding={{xs: "0px"}} margin={{xs: "10px"}}>
+                        <div>{description}</div>
                     </Grid2>
-                    <Grid2 xs={7}>
-                        <AccordionComponent id={2} title="Comics"  characters={comics}/> 
+                    <Grid2 xs={7} md={7} paddingTop={{xs: "20px"}}>
+                        <AccordionComponent id={id} title="Comics"  characters={comics}/> 
                     </Grid2>
                 </Grid2>
             </BodySingle>
@@ -69,7 +69,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = characters.map(char => ({
         params: {id: `${char.id}`}
     }))
-    return {paths, fallback: false}
+    return {paths, fallback: 'blocking'}
 }
 
 export const getStaticProps: GetStaticProps<CharacterDetailProps> = async ({params}: GetStaticPropsContext<any>) => {
