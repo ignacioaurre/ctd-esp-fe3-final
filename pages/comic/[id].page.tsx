@@ -54,8 +54,6 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
     const urlImage = thumbnail.path + '.' + thumbnail.extension;
     const buttonTxt = stock > 0 ? "Comprar" : "No hay stock disponible";
 
-    console.log(state)
-
     const handleButton = () => {
         const comic = {img: urlImage, price, title}
         selectComic(dispatch, comic)

@@ -4,6 +4,11 @@ import ControlledTextInput from '../controlledTextInput/controlledTextInput'
 import { FormProvider, useForm } from 'react-hook-form';
 import *  as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import useOrder from 'context/useOrder';
+import { Delivery } from 'dh-marvel/features/Types/state.types';
+import { submitDelivery } from 'context/actions';
 
 const deliverySchema = yup.object({
     direccion: yup.string().required("La dirección es requerida"),
@@ -13,28 +18,34 @@ const deliverySchema = yup.object({
     codigoPostal: yup.string().required("El codigo postal es requerido"),
 })
 
-type DeliveryFormData = {
-    direccion: string,
-    departamento?: string,
-    ciudad: string,
-    provincia: string,
-    codigoPostal: string,
-}
-
 type DeliveryFormProps = {
     title: string,
+    activeStep: number,
+    handleBack: () => void,
+    handleNext: () => void,
+    steps: string[]
 }
 
-const DeliveryForm: FC<DeliveryFormProps> = ({title}: DeliveryFormProps) => {
+const DeliveryForm: FC<DeliveryFormProps> = ({title, activeStep, handleBack, handleNext, steps}: DeliveryFormProps) => {
 
-    const methods = useForm<DeliveryFormData>({
-        resolver: yupResolver(deliverySchema)
+    const { state: {order: {delivery: { direccion, departamento, ciudad, provincia, codigoPostal}}}, dispatch } = useOrder();
+
+    const methods = useForm<Delivery>({
+        resolver: yupResolver(deliverySchema),
+            defaultValues: {
+                direccion,
+                departamento,
+                ciudad,
+                provincia,
+                codigoPostal,
+            }
     })
 
     const { setFocus, handleSubmit } = methods;
 
-    const onSubmit = (data: DeliveryFormData) => {
-        console.log(data)
+    const onSubmit = (data: Delivery) => {
+        submitDelivery(dispatch, data);
+        handleNext();
     }
 
     useEffect(() => {
@@ -52,6 +63,20 @@ const DeliveryForm: FC<DeliveryFormProps> = ({title}: DeliveryFormProps) => {
             <ControlledTextInput name="provincia" label="Provincia " defaultValue="" />
             <ControlledTextInput name="codigoPostal" label="Codigo Postal " defaultValue="" />
         </Stack>
+        <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Button
+            color="inherit"
+            disabled={activeStep === 0}
+            onClick={handleBack}
+            sx={{ mr: 1 }}
+            >
+            Anterior
+            </Button>
+            <Box sx={{ flex: '1 1 auto' }} />
+            <Button type="submit">
+            {activeStep === steps.length - 1 ? 'Finalizar' : 'Proximo'}
+            </Button>
+        </Box>
         </form>
     </FormProvider>
   )

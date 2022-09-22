@@ -5,7 +5,7 @@ export type ComicInfo = {
 }
 
 export type Register = {
-    usuario:string
+    nombre:string
     apellido: string,
     email: string,
 }
@@ -30,4 +30,15 @@ export type Order = {
     register: Register,
     delivery: Delivery,
     card: Card,
+}
+
+export type FinishedOrder = {
+    comic: ComicInfo,
+    comprador: Register,
+    direccion: Delivery,
+}
+
+export type Snackbar = {
+    open: boolean,
+    message: string,
 }

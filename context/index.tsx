@@ -1,14 +1,17 @@
-import { Order } from 'dh-marvel/features/Types/state.types';
+import { CheckoutInput } from 'dh-marvel/features/checkout/checkout.types';
+import { Order, Snackbar } from 'dh-marvel/features/Types/state.types';
 import React, { useMemo, useReducer, createContext, FC, Dispatch, PropsWithChildren } from 'react';
 
 import { reducer, initialState, Action } from './reducer';
 
 export interface OrderState {
-  order: Order
+  order: Order,
+  snackbar: Snackbar,
+  finishedOrder: CheckoutInput,
 }
 
 export type OrderContextState = {
-  state: {order: Order},
+  state: {order: Order, snackbar: Snackbar, finishedOrder: CheckoutInput},
   dispatch: Dispatch<Action>
 }
 

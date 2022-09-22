@@ -4,6 +4,7 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
 import Typography from '@mui/material/Typography';
+import useOrder from 'context/useOrder';
 import React, { FC } from 'react'
 
 type StepperProps = {
@@ -16,6 +17,9 @@ type StepperProps = {
 }
 
 const StepperCheckout: FC<StepperProps> = ({steps, activeStep, handleNext, handleBack, onSubmit, children}: StepperProps) => {
+
+    const { state } = useOrder();
+
   return (
     <>
         <Stepper activeStep={activeStep}>
@@ -31,10 +35,12 @@ const StepperCheckout: FC<StepperProps> = ({steps, activeStep, handleNext, handl
             );
             })}
             </Stepper>
-            {activeStep === steps.length ? (
+            {/* {activeStep === steps.length ? (
                 <>
                 <Typography sx={{ mt: 2, mb: 1 }}>
-                    Has completado todos los datos. Pulse el botón para finalizar la compra.
+                    {state.order.register.nombre}
+                    {state.order.delivery.direccion}
+                    {state.order.card.nroTarjeta}
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                     <Box sx={{ flex: '1 1 auto' }} />
@@ -42,24 +48,10 @@ const StepperCheckout: FC<StepperProps> = ({steps, activeStep, handleNext, handl
                 </Box>
                 </>
             ) : (
-                <>
+                <> */}
                 {children}
-                <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-                    <Button
-                    color="inherit"
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    sx={{ mr: 1 }}
-                    >
-                    Anterior
-                    </Button>
-                    <Box sx={{ flex: '1 1 auto' }} />
-                    <Button onClick={handleNext}>
-                    {activeStep === steps.length - 1 ? 'Finalizar' : 'Proximo'}
-                    </Button>
-                </Box>
-                </>
-            )}
+                {/* </>
+            )} */}
     </>
   )
 }
