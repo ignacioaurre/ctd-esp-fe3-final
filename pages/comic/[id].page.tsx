@@ -14,6 +14,9 @@ import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
 import Button from '@mui/material/Button'
+import { useRouter } from 'next/router';
+import { selectComic } from 'context/actions';
+import useOrder from 'context/useOrder';
 
 type Items = {
     resourceURI: string,
@@ -45,8 +48,19 @@ type ComicDetailProps = {
 
 const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, title, description, characters, price, oldPrice, stock, format}: ComicDetailProps) => {
 
+    const router = useRouter();
+    const { state, dispatch } = useOrder();
+
     const urlImage = thumbnail.path + '.' + thumbnail.extension;
-    const buttonTxt = stock > 0 ? "Comprar" : "No hay stock disponible"
+    const buttonTxt = stock > 0 ? "Comprar" : "No hay stock disponible";
+
+    console.log(state)
+
+    const handleButton = () => {
+        const comic = {img: urlImage, price, title}
+        selectComic(dispatch, comic)
+        router.push("/checkout")
+    }
 
   return (
         <LayoutGeneral>
@@ -61,24 +75,24 @@ const ComicDetail: NextPage<ComicDetailProps> = ({id, thumbnail, pageCount, titl
                             <Image src={urlImage} alt='Portada del comic' height={300} width={200}/>
                     </Grid2>
                     <Grid2 xs={3}>
-                    <Card sx={{ minWidth: 300 }}>
-                        <CardContent>
-                            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                            {format}
-                            </Typography>
-                            <Typography variant="h6" component="div">
-                            {title}
-                            </Typography>
-                            <Typography sx={{ mb: 1.5, textDecorationLine: "line-through" }} color="text.secondary">
-                            { oldPrice != price ? `$${oldPrice}` : null}
-                            </Typography>
-                            <Typography variant="body1">
-                            ${price}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button sx={{width: "100%"}} disabled={stock == 0} size="large" variant="contained">{buttonTxt} </Button>
-                        </CardActions>
+                        <Card sx={{ minWidth: 300 }}>
+                            <CardContent>
+                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                {format}
+                                </Typography>
+                                <Typography variant="h6" component="div">
+                                {title}
+                                </Typography>
+                                <Typography sx={{ mb: 1.5, textDecorationLine: "line-through" }} color="text.secondary">
+                                { oldPrice != price ? `$${oldPrice}` : null}
+                                </Typography>
+                                <Typography variant="body1">
+                                ${price}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button sx={{width: "100%"}} disabled={stock == 0} size="large" variant="contained" onClick={handleButton}>{buttonTxt} </Button>
+                            </CardActions>      
                         </Card>
                     </Grid2>
                     <Grid2 xs={7}>

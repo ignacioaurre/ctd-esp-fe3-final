@@ -12,7 +12,7 @@ const Grid: FC<Props> = ({comics}) => {
     <Grid2 container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} >
   {comics.map((comic, index) => (
     <Grid2 xs={12} sm={4} md={4} key={index}>
-            <ComicCard title={comic.title} img={comic.thumbnail.path + "." + comic.thumbnail.extension} id={comic.id}/>
+            <ComicCard title={comic.title} img={comic.thumbnail.path + "." + comic.thumbnail.extension} id={comic.id} price={comic.price}/>
     </Grid2>
   ))}
 </Grid2>

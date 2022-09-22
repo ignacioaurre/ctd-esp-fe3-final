@@ -1,53 +1,22 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { useContext } from 'react';
 import LayoutCheckout from 'dh-marvel/components/layouts/layout-checkout';
 import StepperCheckout from 'dh-marvel/components/stepper/stepper';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
-import BodySingle from 'dh-marvel/components/layouts/body/single/body-single';
-import { FormProvider, useForm } from 'react-hook-form';
 import RegisterForm from 'dh-marvel/components/registerForm/RegisterForm';
 import DeliveryForm from 'dh-marvel/components/deliveryForm/DeliveryForm';
 import CardForm from 'dh-marvel/components/cardForm/CardForm';
-
-const checkoutSchema = yup.object({
-    nombre: yup.string().required("El nombre es requerido"),
-    apellido: yup.string().required("El apellido es requerido"),
-    email: yup.string().email("Debe ser un email válido").required("El campo es requerido"),
-    direccion: yup.string().required("La dirección es requerida"),
-    departamento: yup.string(),
-    ciudad: yup.string().required("La ciudad es requerida"),
-    provincia: yup.string().required("La provincia es requerida"),
-    codigoPostal: yup.string().required("El codigo postal es requerido"),
-    nroTarjeta: yup.string().required("Ingrese un número de tarjeta"),
-    nombreTarjeta: yup.string().required("El nombre como figura en la tarjeta es requerido"),
-    fechaExp: yup.string().required("La fecha de expiración es requerida"),
-    codSeguridad: yup.string().required("Código de seguridad requerido"),
-})
-
-type RegisterFormData = {
-    nombre: string,
-    apellido: string,
-    email: string,
-    direccion: string,
-    departamento?: string,
-    ciudad: string,
-    provincia: string,
-    codigoPostal: string,
-    nroTarjeta: string,
-    nombreTarjeta: string,
-    fechaExp: string,
-    codSeguridad: string,
-}
-
+import Stack from '@mui/material/Stack';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { Box, CardMedia } from '@mui/material';
+import useOrder from 'context/useOrder';
 
 const steps = ['Datos personales', 'Dirección de entrega', 'Sección de pago'];
 
 const Checkout: NextPage = () => {
 
-    const methods = useForm<RegisterFormData>({
-        resolver: yupResolver(checkoutSchema)
-    })
+    const { state: { order: {comic: {title, img, price} } } } = useOrder();
 
     const [activeStep, setActiveStep] = React.useState(0);
 
@@ -59,21 +28,20 @@ const Checkout: NextPage = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const handleSubmit = () => {
+    const onSubmit = () => {
         setActiveStep(0);
     };
 
     return (
         <LayoutCheckout>
-            <BodySingle>
-                <FormProvider {...methods} >
-                <form style={{width: "65%", height: "100%", marginLeft: "20px"}}>
+            <Box width="100%" display="flex">
+                    <Stack sx={{width: "60%"}} mb={2}>
                     <StepperCheckout 
                         steps={steps}
                         activeStep={activeStep}
                         handleNext={handleNext}
                         handleBack={handleBack}
-                        onSubmit={handleSubmit}>
+                        onSubmit={onSubmit}>
                             {activeStep === 0 &&
                                 <RegisterForm title={steps[activeStep]}/>
                             }
@@ -84,9 +52,26 @@ const Checkout: NextPage = () => {
                                 <CardForm title={steps[activeStep]}/>
                             }
                     </StepperCheckout>
-                </form>
-                </FormProvider>
-            </BodySingle>
+                    </Stack>
+                    <Stack sx={{width: "30%", alignItems: "center"}}>
+                        <Card sx={{ height: "60%", width: "80%" }}>
+                            <CardMedia
+                            component="img"
+                            height="60%"
+                            image={img}
+                            alt={title}
+                            />
+                            <CardContent>
+                                <Typography variant="h6" component="div">
+                                {title}
+                                </Typography>
+                                <Typography variant="body1">
+                                ${price}
+                                </Typography>
+                            </CardContent>    
+                        </Card>
+                    </Stack>
+            </Box>
         </LayoutCheckout>
   )
 }
