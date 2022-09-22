@@ -46,13 +46,29 @@ export const initialState: OrderState = {
 export const reducer = (state: OrderState, action: Action) => {
     switch (action.type) {
         case 'ADD_COMIC':
-            return {...state, comic: action.payload}
+            return {...state,
+                order: {...state.order,
+                    comic: action.payload
+                }
+            }
         case 'SUBMIT_REGISTER':
-            return {...state, register: action.payload}
+            return {...state,
+                order: {...state.order,
+                    register: action.payload
+                }
+            }
         case 'SUBMIT_DELIVERY':
-            return {...state, delivery: action.payload}
+            return {...state,
+                order: {...state.order,
+                    delivery: action.payload
+                }
+            }
         case 'SUBMIT_CARD':
-            return {...state, card: action.payload}
+            return {...state,
+                order: {...state.order,
+                    card: action.payload
+                }
+            }
         default:
       return state;
     }
