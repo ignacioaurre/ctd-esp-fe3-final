@@ -4,7 +4,8 @@ import useOrder from 'context/useOrder'
 import CheckoutCard from 'dh-marvel/components/checkoutCard/CheckoutCard'
 import LayoutCheckout from 'dh-marvel/components/layouts/layout-checkout'
 import { NextPage } from 'next'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 
 type ConfirmacionCompraProps = {
 
@@ -13,6 +14,12 @@ type ConfirmacionCompraProps = {
 const ConfirmacionCompra: NextPage<ConfirmacionCompraProps> = ({}: ConfirmacionCompraProps) => {
 
     const { state: {finishedOrder}, dispatch } = useOrder();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!finishedOrder.order?.name)
+          router.push("/")
+      }, [])
 
   return (
     <LayoutCheckout>
