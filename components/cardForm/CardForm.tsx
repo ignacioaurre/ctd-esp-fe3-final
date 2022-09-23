@@ -78,7 +78,6 @@ const CardForm: FC<CardFormProps> = ({title, activeStep, handleBack, handleNext,
         }
         const response = await fetch("/api/checkout", options)
         const result = await response.json()
-        console.log(result)
         if(result.error)
             setSnackbar(dispatch, result.message);
         else 

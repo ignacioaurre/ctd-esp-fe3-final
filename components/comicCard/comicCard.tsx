@@ -8,15 +8,16 @@ import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 import { selectComic } from 'context/actions';
 import useOrder from 'context/useOrder';
+import { Comic } from 'dh-marvel/features/Types/comic.types';
+import { ComicInfo } from 'dh-marvel/features/Types/state.types';
 
 type comicCardProps = {
     id: number,
     title: string,
     img: string,
-    price: number,
 }
 
-const ComicCard: FC<comicCardProps> = ({id, title, img, price}: comicCardProps) => {
+const ComicCard: FC<comicCardProps> = ({id, title, img}: comicCardProps) => {
 
   const { dispatch } = useOrder();
 
@@ -26,10 +27,17 @@ const ComicCard: FC<comicCardProps> = ({id, title, img, price}: comicCardProps) 
     router.push(`/comic/${id}`)
   }
 
-  const goToCheckout = () => {
-    const comic = {img, price, title}
-    selectComic(dispatch, comic)
-    router.push("/checkout")
+  const goToCheckout = async () => {
+    const response = await fetch(`/api/compraRapida?id=${id}`);
+    const result: Comic = await response.json()
+    if (result.stock === 0) {
+      router.push(`comic/${result.id}`)
+    }
+    else {
+      const comic: ComicInfo = {img: img, title: title, price: result.price}
+      selectComic(dispatch, comic)
+      router.push("/checkout")
+    }
   }
 
   return (
