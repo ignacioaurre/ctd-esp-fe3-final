@@ -6,13 +6,13 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import useOrder from 'context/useOrder';
+import useOrder from 'dh-marvel/context/useOrder';
 import { Card } from 'dh-marvel/features/Types/state.types';
-import { setSnackbar, submitCard, submitForm } from 'context/actions';
+import { setSnackbar, submitCard, submitForm } from 'dh-marvel/context/actions';
 import { useRouter } from 'next/router';
 import { CheckoutInput } from 'dh-marvel/features/checkout/checkout.types';
 
-const cardSchema = yup.object({
+export const cardSchema = yup.object({
     nroTarjeta: yup.string().required("Ingrese un número de tarjeta"),
     nombreTarjeta: yup.string().required("El nombre como figura en la tarjeta es requerido"),
     fechaExp: yup.string().required("La fecha de expiración es requerida"),

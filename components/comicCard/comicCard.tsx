@@ -6,8 +6,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
-import { selectComic } from 'context/actions';
-import useOrder from 'context/useOrder';
+import { selectComic } from 'dh-marvel/context/actions';
+import useOrder from 'dh-marvel/context/useOrder';
 import { Comic } from 'dh-marvel/features/Types/comic.types';
 import { ComicInfo } from 'dh-marvel/features/Types/state.types';
 

@@ -1,4 +1,4 @@
-import { OrderContext, OrderContextState } from "context";
+import { OrderContext, OrderContextState } from ".";
 import { useContext } from "react";
 
 const useOrder = (): OrderContextState => {

@@ -6,11 +6,11 @@ import *  as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import useOrder from 'context/useOrder';
-import { submitRegister } from 'context/actions';
+import useOrder from 'dh-marvel/context/useOrder';
+import { submitRegister } from 'dh-marvel/context/actions';
 import { Register } from 'dh-marvel/features/Types/state.types';
 
-const registerSchema = yup.object({
+export const registerSchema = yup.object({
     nombre: yup.string().required("El nombre es requerido"),
     apellido: yup.string().required("El apellido es requerido"),
     email: yup.string().email("Debe ser un email válido").required("El campo es requerido"),

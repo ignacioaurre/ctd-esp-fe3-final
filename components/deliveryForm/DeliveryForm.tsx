@@ -6,11 +6,11 @@ import *  as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import useOrder from 'context/useOrder';
+import useOrder from 'dh-marvel/context/useOrder';
 import { Delivery } from 'dh-marvel/features/Types/state.types';
-import { submitDelivery } from 'context/actions';
+import { submitDelivery } from 'dh-marvel/context/actions';
 
-const deliverySchema = yup.object({
+export const deliverySchema = yup.object({
     direccion: yup.string().required("La dirección es requerida"),
     departamento: yup.string(),
     ciudad: yup.string().required("La ciudad es requerida"),

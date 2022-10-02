@@ -34,6 +34,7 @@ const ControlledTextInput: FC<ControlledTextInputProps> = ({name, label, default
                 fullWidth
                 error={!errors[name]}
                 helperText={`${errors[name]?.message || ""} `}
+                data-testid={name}
             />
         </Box>
   )

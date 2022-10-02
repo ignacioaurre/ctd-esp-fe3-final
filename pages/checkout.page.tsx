@@ -7,10 +7,10 @@ import DeliveryForm from 'dh-marvel/components/deliveryForm/DeliveryForm';
 import CardForm from 'dh-marvel/components/cardForm/CardForm';
 import Stack from '@mui/material/Stack';
 import { Alert, Box, Snackbar } from '@mui/material';
-import useOrder from 'context/useOrder';
+import useOrder from 'dh-marvel/context/useOrder';
 import { useRouter } from 'next/router';
 import CheckoutCard from 'dh-marvel/components/checkoutCard/CheckoutCard';
-import { setSnackbar } from 'context/actions';
+import { setSnackbar } from 'dh-marvel/context/actions';
 
 const steps = ['Datos personales', 'Dirección de entrega', 'Sección de pago'];
 
@@ -29,10 +29,6 @@ const Checkout: NextPage = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const onSubmit = () => {
-        setActiveStep(0);
-    };
-
     const handleClose = () => {
         setSnackbar(dispatch, "")
     }
@@ -49,10 +45,7 @@ const Checkout: NextPage = () => {
                     <Stack sx={{width: "60%"}} mb={2}>
                     <StepperCheckout 
                         steps={steps}
-                        activeStep={activeStep}
-                        handleNext={handleNext}
-                        handleBack={handleBack}
-                        onSubmit={onSubmit}>
+                        activeStep={activeStep}>
                             {activeStep === 0 &&
                                 <RegisterForm title={steps[activeStep]} activeStep={activeStep} steps={steps} handleBack={handleBack} handleNext={handleNext} />
                             }
