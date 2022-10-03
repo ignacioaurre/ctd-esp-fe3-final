@@ -1,22 +1,40 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import useOrder from 'dh-marvel/context/useOrder';
-import ContextProvider, { OrderState } from 'dh-marvel/context/index';
+import ContextProvider from 'dh-marvel/context/index';
 import { initialState } from 'dh-marvel/context/reducer';
 import Checkout from './checkout.page';
-import { Comic } from 'dh-marvel/features/Types/comic.types';
+import { useRouter } from "next/router";
 
 jest.mock("dh-marvel/context/useOrder")
 const mockUseOrder = useOrder as jest.MockedFunction<typeof useOrder>
 const mockDispatch = jest.fn();
-const mockComic: OrderState = initialState;
-mockComic.order.comic = {img: "img.jpg", price: 72, title: "Spiderman Volume 1"};
 mockUseOrder.mockReturnValue({
-    state: mockComic, 
+    state: initialState, 
     dispatch: mockDispatch
 })
 
+const mockPush = jest.fn();
+jest.mock('next/router', () => ({
+    useRouter: jest.fn(),
+}));
+(useRouter as jest.Mock).mockImplementation(() => ({
+    push: mockPush,
+}))
+
 describe('Component Checkout', () => {
+
+    test("Redirect to home if no comic selected", async () => {
+        render(
+            <ContextProvider>
+                <Checkout />
+            </ContextProvider>
+        )
+        await waitFor(() => {
+            expect(mockPush).toHaveBeenNthCalledWith(1, "/"); 
+        })
+    })
+
     test("Component should render", () => {
     const { baseElement } =
     render(

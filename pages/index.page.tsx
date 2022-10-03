@@ -14,11 +14,10 @@ import CircularIndeterminate from 'dh-marvel/components/loading/loading';
 
 type homeProps = {
     comics: Comic[],
-    count: number,
     total: number,
 }
 
-const Index: NextPage<homeProps> = ({comics, count, total}: homeProps) => {
+const Index: NextPage<homeProps> = ({comics, total}: homeProps) => {
 
     const [comicsPage, setComicsPage] = useState<Comic[]>(comics)
     const [page, setPage] = useState(1);
@@ -70,7 +69,6 @@ export async function getStaticProps() {
       return {
         props:  { 
             comics: response.data.results,
-            count: response.data.count,
             total: response.data.total } ,
       };
 }

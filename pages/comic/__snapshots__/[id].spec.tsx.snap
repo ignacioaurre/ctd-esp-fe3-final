@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ID comic Page Component should match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="css-1rzuxdl-MuiStack-root"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-h6 MuiLink-root MuiLink-underlineAlways css-973mah-MuiTypography-root-MuiLink-root"
+              href="/"
+            >
+               DH-Marvel
+            </a>
+            <div
+              class="MuiBox-root css-0"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-f11se6-MuiTypography-root-MuiLink-root"
+                href="/faqs"
+              >
+                FAQ
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="MuiBox-root css-1hog1e3"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+        >
+          <div
+            class="css-fdaco8-MuiStack-root"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-14leyog-MuiTypography-root"
+            >
+              Detalle del Comic
+            </h2>
+            <div
+              class="MuiGrid2-root MuiGrid2-container MuiGrid2-spacing-xs-2 css-1nwx68v-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-3 css-p4z6b7-MuiGrid2-root"
+              >
+                <span
+                  style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%27300%27/%3e"
+                      style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    />
+                  </span>
+                  <img
+                    alt="Portada del comic"
+                    data-nimg="intrinsic"
+                    decoding="async"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                  />
+                  <noscript />
+                </span>
+              </div>
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-3 css-p4z6b7-MuiGrid2-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-830i6s-MuiPaper-root-MuiCard-root"
+                >
+                  <div
+                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-16m3jxf-MuiTypography-root"
+                    >
+                      format
+                    </p>
+                    <div
+                      class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+                    >
+                      titulo
+                    </div>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-170qu9w-MuiTypography-root"
+                    >
+                      $20
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                    >
+                      $
+                      24
+                    </p>
+                  </div>
+                  <div
+                    class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge css-189e9pj-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Comprar
+                       
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-7 css-1knq2yb-MuiGrid2-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1elwnq4-MuiPaper-root-MuiAccordion-root"
+                >
+                  <div
+                    aria-controls="panel1a-content"
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root"
+                    id="panel1a-header"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                      >
+                        Descripcion
+                      </p>
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                    style="min-height: 0px;"
+                  >
+                    <div
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                    >
+                      <div
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                      >
+                        <div
+                          aria-labelledby="panel1a-header"
+                          class="MuiAccordion-region"
+                          id="panel1a-content"
+                          role="region"
+                        >
+                          <div
+                            class="MuiAccordionDetails-root css-zpvdp-MuiAccordionDetails-root"
+                          >
+                            <p
+                              class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                            >
+                              descripbion
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-7 css-1knq2yb-MuiGrid2-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-1elwnq4-MuiPaper-root-MuiAccordion-root"
+                >
+                  <div
+                    aria-controls="panel1a-content"
+                    aria-expanded="false"
+                    class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root"
+                    id="panel1a-header"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-o4b71y-MuiAccordionSummary-content"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                      >
+                        Personajes
+                      </p>
+                    </div>
+                    <div
+                      class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="ExpandMoreIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                    style="min-height: 0px;"
+                  >
+                    <div
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                    >
+                      <div
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                      >
+                        <div
+                          aria-labelledby="panel1a-header"
+                          class="MuiAccordion-region"
+                          id="panel1a-content"
+                          role="region"
+                        >
+                          <div
+                            class="MuiAccordionDetails-root css-zpvdp-MuiAccordionDetails-root"
+                          >
+                            <p
+                              class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                            >
+                              No hay personajes para este comic
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="MuiBox-root css-2pi20k"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-zfdr7-MuiTypography-root-MuiLink-root"
+          href="https://www.digitalhouse.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Powered by
+           
+          <div
+            class="MuiBox-root css-18lsnf1"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27168%27%20height=%2713%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="Digital House Logo"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+          </div>
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+`;

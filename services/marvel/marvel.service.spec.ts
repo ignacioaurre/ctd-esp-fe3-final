@@ -1,9 +1,10 @@
-import {getCharacter, getComic, getComics} from "dh-marvel/services/marvel/marvel.service";
-import comics from "dh-marvel/test/mocks/comics";
+import {getCharacter, getCharacters, getComic, getComics} from "dh-marvel/services/marvel/marvel.service";
 import character from "dh-marvel/test/mocks/character";
 import comic from "dh-marvel/test/mocks/comic";
 import comicsWithOffsetAndLimit from "dh-marvel/test/mocks/comicsWithOffsetAndLimit";
 import comicWithoutStock from "dh-marvel/test/mocks/comicWithoutStock";
+import { arrayCharacters } from "dh-marvel/test/mocks/characters";
+import { Comic } from "dh-marvel/features/Types/comic.types";
 
 describe('MarvelService', () => {
     beforeEach(() => {
@@ -11,9 +12,10 @@ describe('MarvelService', () => {
     })
     describe('when fetching comics', () => {
         describe('when fetching without offset and limit', () => {
+            const response = {data: {response: {} as Comic[]}}
             it('should return a valid default page of comics', async () => {
                 const data = await getComics();
-                expect(data).toStrictEqual(comics)
+                expect(data).toStrictEqual(response)
             })
         })
         describe('when fetching with offset and limit ', () => {
@@ -64,6 +66,16 @@ describe('MarvelService', () => {
             it('should return a null response', async () => {
                 const data = await getCharacter(99);
                 expect(data).toBeNull()
+            })
+        })
+        describe("when characters are found", () => {
+            it('should return am array of valid characters', async () => {
+                const data = await getCharacters(0,12);
+                expect(data).toStrictEqual(arrayCharacters)
+            })
+            it('should return an array of valid characters', async () => {
+                const data = await getCharacters(4,12);
+                expect(data).toStrictEqual(arrayCharacters)
             })
         })
     })

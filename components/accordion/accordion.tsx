@@ -6,12 +6,12 @@ import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from 'next/link'
 
-type Items = {
+export type Items = {
   resourceURI: string,
   name: string,
 }
 
-type Characters = {
+export type Characters = {
   available: number,
   collectionURI: string,
   items: Items[] ,

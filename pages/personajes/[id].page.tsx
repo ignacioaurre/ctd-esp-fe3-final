@@ -67,6 +67,7 @@ const CharacterDetail: NextPage<CharacterDetailProps> = ({id, name, thumbnail, d
 export const getStaticPaths: GetStaticPaths = async () => {
     const response = await getCharacters(0, 12);
     const characters: Character[] = await response.data.results;
+    console.log(characters)
     const paths = characters.map(char => ({
         params: {id: `${char.id}`}
     }))

@@ -15,8 +15,8 @@ import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
 import Button from '@mui/material/Button'
 import { useRouter } from 'next/router';
-import { selectComic } from 'context/actions';
-import useOrder from 'context/useOrder';
+import { selectComic } from 'dh-marvel/context/actions';
+import useOrder from 'dh-marvel/context/useOrder';
 
 type Items = {
     resourceURI: string,

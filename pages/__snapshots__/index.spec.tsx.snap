@@ -1,0 +1,438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage when rendering default Should match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="css-1rzuxdl-MuiStack-root"
+    >
+      <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
+          >
+            <a
+              class="MuiTypography-root MuiTypography-h6 MuiLink-root MuiLink-underlineAlways css-973mah-MuiTypography-root-MuiLink-root"
+              href="/"
+            >
+               DH-Marvel
+            </a>
+            <div
+              class="MuiBox-root css-0"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-f11se6-MuiTypography-root-MuiLink-root"
+                href="/faqs"
+              >
+                FAQ
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="MuiBox-root css-1hog1e3"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+        >
+          <div
+            class="css-fdaco8-MuiStack-root"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-14leyog-MuiTypography-root"
+            >
+              Todos los Cómics
+            </h2>
+            <div
+              class="css-1bord8k-MuiStack-root"
+            >
+              <nav
+                aria-label="pagination navigation"
+                class="MuiPagination-root MuiPagination-text css-1oj2twp-MuiPagination-root"
+              >
+                <ul
+                  class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+                >
+                  <li>
+                    <button
+                      aria-current="true"
+                      aria-label="page 1"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      1
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 2"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      2
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 3"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      3
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 4"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      4
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 5"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      5
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <div
+                      class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
+                    >
+                      …
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 10"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      10
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to next page"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateNextIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-container MuiGrid2-spacing-xs-2 MuiGrid2-spacing-md-3 css-3ekhed-MuiGrid2-root"
+            >
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 MuiGrid2-grid-md-4 css-81odlb-MuiGrid2-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+                >
+                  <img
+                    alt="Foto portada del cómic"
+                    class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                    height="300"
+                    src="http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
+                  />
+                  <div
+                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  >
+                    <div
+                      class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+                    >
+                      Marvel Previews (2017)
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                       Comprar
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Ver Detalle
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid2-root MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-4 MuiGrid2-grid-md-4 css-81odlb-MuiGrid2-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+                >
+                  <img
+                    alt="Foto portada del cómic"
+                    class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                    height="300"
+                    src="http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
+                  />
+                  <div
+                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  >
+                    <div
+                      class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+                    >
+                      Marvel Previews (2017)
+                    </div>
+                  </div>
+                  <div
+                    class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                       Comprar
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Ver Detalle
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1bord8k-MuiStack-root"
+            >
+              <nav
+                aria-label="pagination navigation"
+                class="MuiPagination-root MuiPagination-text css-1oj2twp-MuiPagination-root"
+              >
+                <ul
+                  class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+                >
+                  <li>
+                    <button
+                      aria-current="true"
+                      aria-label="page 1"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      1
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 2"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      2
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 3"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      3
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 4"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      4
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 5"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      5
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <div
+                      class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
+                    >
+                      …
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 10"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      10
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to next page"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateNextIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="MuiBox-root css-2pi20k"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-zfdr7-MuiTypography-root-MuiLink-root"
+          href="https://www.digitalhouse.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Powered by
+           
+          <div
+            class="MuiBox-root css-18lsnf1"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27168%27%20height=%2713%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="Digital House Logo"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+          </div>
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+`;

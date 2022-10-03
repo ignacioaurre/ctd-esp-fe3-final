@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Checkout Component should render 1`] = `
+<body>
+  <div>
+    <div
+      class="css-1rzuxdl-MuiStack-root"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-h6 MuiLink-root MuiLink-underlineAlways css-973mah-MuiTypography-root-MuiLink-root"
+            href="/"
+          >
+             DH-Marvel
+          </a>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-1ilyui9"
+      >
+        <div
+          class="MuiBox-root css-1ykdma4"
+        >
+          <div
+            class="css-1gh79wb-MuiStack-root"
+          >
+            <div
+              class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+            >
+              <div
+                class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+              >
+                <span
+                  class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+                >
+                  <span
+                    class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="12"
+                      />
+                      <text
+                        class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                        dominant-baseline="central"
+                        text-anchor="middle"
+                        x="12"
+                        y="12"
+                      >
+                        1
+                      </text>
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+                  >
+                    <span
+                      class="MuiStepLabel-label Mui-active css-qivjh0-MuiStepLabel-label"
+                    >
+                      Datos personales
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+              >
+                <span
+                  class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+                />
+              </div>
+              <div
+                class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+              >
+                <span
+                  class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+                >
+                  <span
+                    class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="12"
+                      />
+                      <text
+                        class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                        dominant-baseline="central"
+                        text-anchor="middle"
+                        x="12"
+                        y="12"
+                      >
+                        2
+                      </text>
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+                  >
+                    <span
+                      class="MuiStepLabel-label Mui-disabled css-qivjh0-MuiStepLabel-label"
+                    >
+                      Dirección de entrega
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+              >
+                <span
+                  class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+                />
+              </div>
+              <div
+                class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+              >
+                <span
+                  class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+                >
+                  <span
+                    class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="12"
+                      />
+                      <text
+                        class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                        dominant-baseline="central"
+                        text-anchor="middle"
+                        x="12"
+                        y="12"
+                      >
+                        3
+                      </text>
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+                  >
+                    <span
+                      class="MuiStepLabel-label Mui-disabled css-qivjh0-MuiStepLabel-label"
+                    >
+                      Sección de pago
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <form>
+              <h4>
+                Datos personales
+              </h4>
+              <div
+                class="css-nen11g-MuiStack-root"
+              >
+                <div
+                  class="MuiBox-root css-1qm1lh"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    data-testid="nombre"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-focused css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="true"
+                      for=":r3:"
+                      id=":r3:-label"
+                    >
+                      Nombre 
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                    >
+                      <input
+                        aria-describedby=":r3:-helper-text"
+                        aria-invalid="true"
+                        class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                        id=":r3:"
+                        type="text"
+                        value="Tony"
+                      />
+                      <fieldset
+                        aria-hidden="true"
+                        class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                      >
+                        <legend
+                          class="css-1in441m"
+                        >
+                          <span>
+                            Nombre 
+                          </span>
+                        </legend>
+                      </fieldset>
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-focused MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+                      id=":r3:-helper-text"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="MuiBox-root css-1qm1lh"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    data-testid="apellido"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="true"
+                      for=":r4:"
+                      id=":r4:-label"
+                    >
+                      Apellido 
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                    >
+                      <input
+                        aria-describedby=":r4:-helper-text"
+                        aria-invalid="true"
+                        class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                        id=":r4:"
+                        type="text"
+                        value="Stark"
+                      />
+                      <fieldset
+                        aria-hidden="true"
+                        class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                      >
+                        <legend
+                          class="css-1in441m"
+                        >
+                          <span>
+                            Apellido 
+                          </span>
+                        </legend>
+                      </fieldset>
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+                      id=":r4:-helper-text"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="MuiBox-root css-1qm1lh"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    data-testid="email"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="true"
+                      for=":r5:"
+                      id=":r5:-label"
+                    >
+                      Email 
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+                    >
+                      <input
+                        aria-describedby=":r5:-helper-text"
+                        aria-invalid="true"
+                        class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                        id=":r5:"
+                        type="text"
+                        value="Tony@stark.com"
+                      />
+                      <fieldset
+                        aria-hidden="true"
+                        class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                      >
+                        <legend
+                          class="css-1in441m"
+                        >
+                          <span>
+                            Email 
+                          </span>
+                        </legend>
+                      </fieldset>
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+                      id=":r5:-helper-text"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiBox-root css-2royc9"
+              >
+                <button
+                  class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-a1sg1c-MuiButtonBase-root-MuiButton-root"
+                  disabled=""
+                  tabindex="-1"
+                  type="button"
+                >
+                  Anterior
+                </button>
+                <div
+                  class="MuiBox-root css-11qjisw"
+                />
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="submit"
+                >
+                  Proximo
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="css-1n233jm-MuiStack-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ob4ila-MuiPaper-root-MuiCard-root"
+            >
+              <img
+                alt=""
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="60%"
+              />
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-h6 css-14upvwq-MuiTypography-root"
+                />
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+                >
+                  $
+                  0
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="MuiBox-root css-2pi20k"
+      >
+        <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-zfdr7-MuiTypography-root-MuiLink-root"
+          href="https://www.digitalhouse.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Powered by
+           
+          <div
+            class="MuiBox-root css-18lsnf1"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27168%27%20height=%2713%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="Digital House Logo"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+          </div>
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+`;
