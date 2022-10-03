@@ -18,7 +18,7 @@ export const deliverySchema = yup.object({
     codigoPostal: yup.string().required("El codigo postal es requerido"),
 })
 
-type DeliveryFormProps = {
+export type DeliveryFormProps = {
     title: string,
     activeStep: number,
     handleBack: () => void,

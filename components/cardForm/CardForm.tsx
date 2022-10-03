@@ -19,7 +19,7 @@ export const cardSchema = yup.object({
     codSeguridad: yup.string().required("Código de seguridad requerido"),
 })
 
-type CardFormProps = {
+export type CardFormProps = {
     title: string,
     activeStep: number,
     handleBack: () => void,

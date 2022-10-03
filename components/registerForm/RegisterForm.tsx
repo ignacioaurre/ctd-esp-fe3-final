@@ -16,7 +16,7 @@ export const registerSchema = yup.object({
     email: yup.string().email("Debe ser un email válido").required("El campo es requerido"),
 })
 
-type RegisterFormProps = {
+export type RegisterFormProps = {
     title: string,
     activeStep: number,
     handleBack: () => void,
